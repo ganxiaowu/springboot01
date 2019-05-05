@@ -1,0 +1,21 @@
+#server:
+#  port: 8081
+#spring:
+#  profiles:
+#    active: pro
+#person:
+#  name: 张三
+#  age: 10
+
+#---
+#server:
+#  port: 8082
+#spring:
+#  profiles: dev
+#---
+#server:
+#  port: 8083
+#spring:
+#  profiles: pro
+
+
