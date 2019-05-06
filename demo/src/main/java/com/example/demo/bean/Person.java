@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;
 
 /**
- * @author: adimn
+ * @author: admin_gan
  * @Date: 2019/5/5.
  * @version: 1.0
  */
