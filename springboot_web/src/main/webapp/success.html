@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>success</title>
+</head>
+<body>
+    good boy! webapp
+    <div th:text="${hello}">welcome to our grocery store!</div>
+    <div th:utext="${hello}">welcome to our grocery store!</div>
+
+    <sapn th:each="user: ${user}" th:text="${user}"></sapn>
+</body>
+</html>
