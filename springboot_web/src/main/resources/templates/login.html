@@ -78,7 +78,7 @@
         <h2 class="title1" th:text="#{login.btn}">Login</h2>
         <div class="widget-shadow">
             <div class="login-body">
-                <form action="/user/login" method="post" th:href="@{/user/login}">
+                <form action="login.htm" method="post" th:href="@{/user/login}">
                     <input type="email" class="user" name="username" placeholder="Enter Your Email" required="" th:placeholder="#{login.username}">
                     <input type="password" name="password" class="lock" placeholder="Password" required="" th:placeholder="#{login.password}">
                     <div class="forgot-grid">
@@ -91,16 +91,16 @@
                     <input type="submit" name="Sign In" value="Sign In" th:value="#{login.btn}">
                     <div class="registration">
                         [[#{login.message}]]
-                        <a class="" href="signup.html">
+                        <a class="" href="core/Examples/signup.html">
                             [[#{login.create}]]
                         </a>
                     </div>
                     <div class="registration">
 
-                        <a class="" th:href="@{/login.html(lang='zh_CN')}">
+                        <a class="" th:href="@{/login.htm(lang='zh_CN')}">
                            中文
                         </a>
-                        <a class="" th:href="@{/login.html(lang='en_US')}">
+                        <a class="" th:href="@{/login.htm(lang='en_US')}">
                             English
                         </a>
                     </div>

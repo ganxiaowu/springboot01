@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  */
 @Controller
 public class login {
-    @RequestMapping(value = "user/login",method = RequestMethod.POST)
+    @RequestMapping(value = "login.htm",method = RequestMethod.POST)
     public String login(@RequestParam("username") String username,
                         @RequestParam("password") String password){
         //todo 登录验证
