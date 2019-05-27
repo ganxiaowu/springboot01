@@ -3,8 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
 
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
- http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd  ">
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://code.alibabatech.com/schema/dubbo
+        http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+">
 
     <!--指定当前服务-->
     <dubbo:application name="user-service-provider"></dubbo:application>
@@ -17,5 +21,8 @@
     <dubbo:service interface="com.service.service.UserService" ref="userServiceImpl"></dubbo:service>
 
     <bean id="userServiceImpl" class="com.service.service.impl.UserServiceImpl"></bean>
+
+    <!--监控中心 自动发现-->
+    <dubbo:monitor protocol="registry"></dubbo:monitor>
 
 </beans>

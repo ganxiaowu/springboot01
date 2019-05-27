@@ -2,13 +2,15 @@ package com.service.bean;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 /**
  * @author: admin_gan
  * @Date: 2019/5/27.
  * @version: 1.0
  */
 @Data
-public class UserAddress {
+public class UserAddress implements Serializable {
     private Integer id;
     private String userAddress;
     private String userId;
