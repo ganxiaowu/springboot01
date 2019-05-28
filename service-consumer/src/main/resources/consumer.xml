@@ -21,13 +21,33 @@
     <!--指定注册中心位置-->
     <!--<dubbo:registry address="zookeeper://127.0.0.1:2181"></dubbo:registry>-->
     <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"></dubbo:registry>
-    <!--声明需要调用的远程接口-->
-    <dubbo:reference interface="com.service.service.UserService" id="userService"></dubbo:reference>
+    <!--声明需要调用的远程接口
+    服务超时 timeout 默认超时1000毫秒 来自consumer配置
+    -->
+    <!--多版本控制 version
+    version="*" 随机访问版本 灰度发布
+    stub 本地存根调用配置
+    random 随机
+    loadbalance 本地存根调用配置
+    -->
+    <dubbo:reference interface="com.service.service.UserService" id="userService" timeout="3000" version="1.0.0" stub="com.service.service.UserserviceStu" loadbalance="roundrobin"></dubbo:reference>
+
+
+
 
     <!--监控中心 自动发现-->
     <dubbo:monitor protocol="registry"></dubbo:monitor>
     <!--直连监控中心-->
     <!--<dubbo:monitor address="172.0.0.1:7070"></dubbo:monitor>-->
+
+    <!--统一配置-->
+    <!--是否检测服务启动-->
+    <dubbo:consumer check="false"></dubbo:consumer>
+    <!--是否检测注册中心启动-->
+    <dubbo:registry check="false"></dubbo:registry>
+    <!--版本配置-->
+
+
 
 
 

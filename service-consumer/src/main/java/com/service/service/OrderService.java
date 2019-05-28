@@ -1,5 +1,9 @@
 package com.service.service;
 
+import com.service.bean.UserAddress;
+
+import java.util.List;
+
 /**
  * @author: admin_gan
  * @Date: 2019/5/27.
@@ -7,5 +11,5 @@ package com.service.service;
  */
 public interface OrderService {
 
-    public void intoOrder(String userId);
+    public List<UserAddress> intoOrder(String userId);
 }

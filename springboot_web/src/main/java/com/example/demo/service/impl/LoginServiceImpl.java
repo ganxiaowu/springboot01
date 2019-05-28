@@ -22,6 +22,8 @@ public class LoginServiceImpl implements LoginService{
     public ResObj login(String username, String password) {
         User user =  userMapper.login(username, password);
 
+
+
         return new ResObj("200","查询成功",user);
     }
 }

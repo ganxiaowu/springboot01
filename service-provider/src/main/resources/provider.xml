@@ -18,9 +18,14 @@
     <!--指定通信规则 协议+规则-->
     <dubbo:protocol name="dubbo" port="20880"></dubbo:protocol>
     <!--暴露服务-->
-    <dubbo:service interface="com.service.service.UserService" ref="userServiceImpl"></dubbo:service>
+    <dubbo:service interface="com.service.service.UserService" ref="userServiceImpl" version="1.0.0"></dubbo:service>
 
     <bean id="userServiceImpl" class="com.service.service.impl.UserServiceImpl"></bean>
+
+    <!--多版本-->
+    <!--暴露服务-->
+    <dubbo:service interface="com.service.service.UserService" ref="userServiceImpl2" version="2.0.0"></dubbo:service>
+    <bean id="userServiceImpl2" class="com.service.service.impl.UserServiceNewImpl"></bean>
 
     <!--监控中心 自动发现-->
     <dubbo:monitor protocol="registry"></dubbo:monitor>

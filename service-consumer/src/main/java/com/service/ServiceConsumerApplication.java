@@ -8,7 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 //基于注解的dubbo功能
 @EnableDubbo
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.service.service"})
+@ComponentScan(basePackages = {"com.service"})
 public class ServiceConsumerApplication {
 
 	public static void main(String[] args) {
